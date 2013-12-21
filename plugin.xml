@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="de.blackapp.phonegap.hello" version="1.0">
+   <name>Hello</name>
+   <license>Apache 2.0</license>
+   <author>Markus Schwarz</author>
+
+   <js-module src="www/hello.js" name="hello">
+      <clobbers target="Hello"/>
+   </js-module>
+
+   <engines>
+      <engine name="cordova" version=">=3.0"/>
+   </engines>
+
+   <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+         <feature name="hello">
+            <param name="ios-package" value="Hello"/>
+            <param name="onload" value="true" />
+         </feature>
+      </config-file>
+      <header-file src="src/iOS/Hello.h"/>
+      <source-file src="src/iOS/Hello.m"/>
+   </platform>
+
+   <platform name="android">
+      <config-file target="config.xml" parent="/*">
+         <feature name="hello">
+            <param name="android-package" value="demo.Hello"/>
+         </feature>
+      </config-file>
+   </platform>
+</plugin>
