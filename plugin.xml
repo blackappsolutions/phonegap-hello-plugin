@@ -12,7 +12,7 @@
 
    <platform name="ios">
       <js-module src="www/iOS/hello.js" name="hello">
-         <clobbers target="myGreeter"/>
+         <clobbers target="myFunkyGreeter"/>
       </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
