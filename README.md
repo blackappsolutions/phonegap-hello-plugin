@@ -20,10 +20,11 @@ Don't forget to update your platforms afterwards with
 
 To use (maybe inside of function receivedEvent from <PROJECT_ROOT>/platforms/ios/www/js/index.js):
 
-   myGreeter.sayHello(function(echoValue) {
+   myFunkyGreeter.sayHello(function(echoValue) {
       alert(echoValue);
    });
 
-   myGreeter.tellTheTime(function(echoValue) {
+   myFunkyGreeter.tellTheTime(function(echoValue) {
       alert(echoValue);
    });
+

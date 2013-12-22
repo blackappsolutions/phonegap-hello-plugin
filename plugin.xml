@@ -26,7 +26,7 @@
 
    <platform name="android">
       <js-module src="www/android/hello.js" name="hello">
-         <clobbers target="myGreeter"/>
+         <clobbers target="myFunkyGreeter"/>
       </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
