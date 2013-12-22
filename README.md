@@ -20,7 +20,6 @@ Don't forget to update your platforms afterwards with
 
 To use (maybe inside of function receivedEvent from <PROJECT_ROOT>/platforms/ios/www/js/index.js):
 
-
    myFunkyGreeter.sayHello(function(echoValue) {
       alert(echoValue);
    });
@@ -28,4 +27,3 @@ To use (maybe inside of function receivedEvent from <PROJECT_ROOT>/platforms/ios
    myFunkyGreeter.tellTheTime(function(echoValue) {
       alert(echoValue);
    });
-
