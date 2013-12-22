@@ -6,15 +6,14 @@
    <license>Apache 2.0</license>
    <author>Markus Schwarz</author>
 
-   <js-module src="www/hello.js" name="hello">
-      <clobbers target="Hello"/>
-   </js-module>
-
    <engines>
       <engine name="cordova" version=">=3.0"/>
    </engines>
 
    <platform name="ios">
+      <js-module src="www/iOS/hello.js" name="hello">
+         <clobbers target="Hello"/>
+      </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
             <param name="ios-package" value="Hello"/>
@@ -26,6 +25,9 @@
    </platform>
 
    <platform name="android">
+      <js-module src="www/android/hello.js" name="hello">
+         <clobbers target="Hello"/>
+      </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
             <param name="android-package" value="demo.Hello"/>
