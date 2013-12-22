@@ -1,15 +1,18 @@
 require('cordova/exec');
 
-var Greeter = {
-  /* This goes into native-land */
-  sayHello : function (str, callback) {
-    cordova.exec(callback, function (err) {callback('Nothing to echo.');}, "Hello", "foo", ["iOS: "+str]);
-  },
+var Greeter = function (message) {
+  this.msg = message;
+}
 
-  /* Here we stay in js-land */
-  tellTheTime : function (str, callback) {
-    callback(new Date() + str);
-  }
-};
+Greeter.prototype.sayHello = function (callback) {
+  cordova.exec(callback, function (err) {
+    callback('Nothing to echo.');
+  }, "Hello", "foo", ["iOS: " + this.msg]);
+}
+
+/* Here we stay in js-land */
+Greeter.prototype.tellTheTime = function (callback) {
+  callback(new Date() + this.msg);
+}
 
 module.exports = Greeter;
