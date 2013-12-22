@@ -20,12 +20,10 @@ Don't forget to update your platforms afterwards with
 
 To use (maybe inside of function receivedEvent from <PROJECT_ROOT>/platforms/ios/www/js/index.js):
 
-   var greeter = new Greeter("Hello Phonegap!");
-
-   greeter.sayHello(function(echoValue) {
+   myGreeter.sayHello(function(echoValue) {
       alert(echoValue);
    });
 
-   greeter.tellTheTime(function(echoValue) {
+   myGreeter.tellTheTime(function(echoValue) {
       alert(echoValue);
    });
