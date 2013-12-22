@@ -15,5 +15,4 @@ Greeter.prototype.tellTheTime = function (callback) {
   callback(new Date() + this.msg);
 };
 
-var myGreeter = new Greeter("---- Testomat ----")
-module.exports = myGreeter;
+module.exports = new Greeter("---- Testomat ----");
