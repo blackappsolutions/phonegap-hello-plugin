@@ -12,7 +12,7 @@
 
    <platform name="ios">
       <js-module src="www/iOS/hello.js" name="hello">
-         <clobbers target="Hello"/>
+         <clobbers target="Greeter"/>
       </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
@@ -26,7 +26,7 @@
 
    <platform name="android">
       <js-module src="www/android/hello.js" name="hello">
-         <clobbers target="Hello"/>
+         <clobbers target="Greeter"/>
       </js-module>
       <config-file target="config.xml" parent="/*">
          <feature name="hello">
